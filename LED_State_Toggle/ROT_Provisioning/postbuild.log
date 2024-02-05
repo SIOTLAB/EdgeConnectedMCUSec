@@ -1,0 +1,11 @@
+Postbuild nonsecure image 
+Creating only one image 
+Creating nonsecure image  
+      -------------------------------------------------------------------
+                       STM32 Trusted Package Creator v2.15.0                  
+      -------------------------------------------------------------------
+
+-pb C:\ST\LED_State_Toggle\ROT_Provisioning\STiROT\Image\STiRoT_Code_Image.xml 
+ 
+Image generated successfully 
+
