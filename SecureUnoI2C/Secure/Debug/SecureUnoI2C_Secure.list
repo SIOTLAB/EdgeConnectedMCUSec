@@ -267,8 +267,8 @@ int main(void)
  c0007ae:	f000 fa67 	bl	c000c80 <Error_Handler>
 		}
 
-		HAL_Delay(100); // Poll twice every second
- c0007b2:	2064      	movs	r0, #100	; 0x64
+		HAL_Delay(10); // Poll twice every second
+ c0007b2:	200a      	movs	r0, #10
  c0007b4:	f000 feac 	bl	c001510 <HAL_Delay>
 	while (1) {
  c0007b8:	e7e4      	b.n	c000784 <main+0x28>

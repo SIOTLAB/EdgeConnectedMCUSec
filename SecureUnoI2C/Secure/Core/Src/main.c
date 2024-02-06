@@ -144,7 +144,7 @@ int main(void)
 			Error_Handler();
 		}
 
-		HAL_Delay(100); // Poll twice every second
+		HAL_Delay(10); // Poll twice every second
 	}
   /* USER CODE END 3 */
 }
