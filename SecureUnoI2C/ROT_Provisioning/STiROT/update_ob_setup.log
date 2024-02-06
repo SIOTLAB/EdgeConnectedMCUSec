@@ -1,0 +1,65 @@
+run AppliCfg with Windows executable
+Updating the ob_flash_programming script ...
+Mon Feb  5 19:04:16 2024 : [INF] ############## Executing obscript command ##############
+Mon Feb  5 19:04:16 2024 : [INF] AppliCfg.exe obscript --xml ./Config/STiRoT_Config.xml -ob SECWM -sp Size of the secure area inside the firmware execution area -cs Firmware area size -co Firmware execution area offset -fs Is the firmware full secure --vb ob_flash_programming.bat
+Mon Feb  5 19:04:16 2024 : [INF] Opening the './Config/STiRoT_Config.xml' file
+Mon Feb  5 19:04:16 2024 : [INF] Searching the parameter with <Name>Size of the secure area inside the firmware execution area</Name>
+Mon Feb  5 19:04:16 2024 : [INF] Parameter found. Extracting information from '<Value>0x00006000</Value>'
+Mon Feb  5 19:04:16 2024 : [INF] The content recovered is '0x00006000'
+Mon Feb  5 19:04:16 2024 : [INF] Searching the parameter with <Name>Is the firmware full secure</Name>
+Mon Feb  5 19:04:16 2024 : [INF] Parameter found. Extracting information from '<Value>0x01</Value>'
+Mon Feb  5 19:04:16 2024 : [INF] The content recovered is '0x01'
+Mon Feb  5 19:04:16 2024 : [INF] Searching the parameter with <Name>Firmware execution area offset</Name>
+Mon Feb  5 19:04:16 2024 : [INF] Parameter found. Extracting information from '<Value>0x00000000</Value>'
+Mon Feb  5 19:04:16 2024 : [INF] The content recovered is '0x00000000'
+Mon Feb  5 19:04:16 2024 : [INF] Searching the parameter with <Name>Firmware area size</Name>
+Mon Feb  5 19:04:16 2024 : [INF] Parameter found. Extracting information from '<Value>0x00020000</Value>'
+Mon Feb  5 19:04:16 2024 : [INF] The content recovered is '0x00020000'
+Mon Feb  5 19:04:16 2024 : [INF] File to update 'ob_flash_programming.bat'
+Mon Feb  5 19:04:16 2024 : [INF] Protection variable "SECWM1_STRT" will be updated with value "0x00006000"
+Mon Feb  5 19:04:16 2024 : [INF] The modification is not necessary
+Mon Feb  5 19:04:16 2024 : [INF] The variable has already the correct value (0x0)
+Mon Feb  5 19:04:16 2024 : [INF] File to update 'ob_flash_programming.bat'
+Mon Feb  5 19:04:16 2024 : [INF] Protection variable "SECWM1_END" will be updated with value "0x00006000"
+Mon Feb  5 19:04:16 2024 : [INF] The modification is not necessary
+Mon Feb  5 19:04:16 2024 : [INF] The variable has already the correct value (0xF)
+Mon Feb  5 19:04:16 2024 : [INF] File to update 'ob_flash_programming.bat'
+Mon Feb  5 19:04:16 2024 : [INF] Protection variable "SECWM2_STRT" will be updated with value "0x00006000"
+Mon Feb  5 19:04:16 2024 : [INF] The modification is not necessary
+Mon Feb  5 19:04:16 2024 : [INF] The variable has already the correct value (0x7F)
+Mon Feb  5 19:04:16 2024 : [INF] File to update 'ob_flash_programming.bat'
+Mon Feb  5 19:04:16 2024 : [INF] Protection variable "SECWM2_END" will be updated with value "0x00006000"
+Mon Feb  5 19:04:16 2024 : [INF] The modification is not necessary
+Mon Feb  5 19:04:16 2024 : [INF] The variable has already the correct value (0x0)
+Mon Feb  5 19:04:16 2024 : [INF] ############## Executing obscript command ##############
+Mon Feb  5 19:04:16 2024 : [INF] AppliCfg.exe obscript --xml ./Config/STiRoT_Config.xml -ob SRAM2_RST -sp SRAM2 erasing in case of reset --vb ob_flash_programming.bat
+Mon Feb  5 19:04:16 2024 : [INF] Opening the './Config/STiRoT_Config.xml' file
+Mon Feb  5 19:04:16 2024 : [INF] Searching the parameter with <Name>SRAM2 erasing in case of reset</Name>
+Mon Feb  5 19:04:16 2024 : [INF] Parameter found. Extracting information from '<Value>0x00000000</Value>'
+Mon Feb  5 19:04:16 2024 : [INF] The content recovered is '0x00000000'
+Mon Feb  5 19:04:16 2024 : [INF] File to update 'ob_flash_programming.bat'
+Mon Feb  5 19:04:16 2024 : [INF] Protection variable "SRAM2_RST" will be updated with value "0x00000000"
+Mon Feb  5 19:04:16 2024 : [INF] The modification is not necessary
+Mon Feb  5 19:04:16 2024 : [INF] The variable has already the correct value (0)
+Mon Feb  5 19:04:16 2024 : [INF] ############## Executing obscript command ##############
+Mon Feb  5 19:04:16 2024 : [INF] AppliCfg.exe obscript --xml ./Config/STiRoT_Config.xml -ob SRAM2_ECC -sp SRAM2 ECC management activation --vb ob_flash_programming.bat
+Mon Feb  5 19:04:16 2024 : [INF] Opening the './Config/STiRoT_Config.xml' file
+Mon Feb  5 19:04:16 2024 : [INF] Searching the parameter with <Name>SRAM2 ECC management activation</Name>
+Mon Feb  5 19:04:16 2024 : [INF] Parameter found. Extracting information from '<Value>0x00000000</Value>'
+Mon Feb  5 19:04:16 2024 : [INF] The content recovered is '0x00000000'
+Mon Feb  5 19:04:16 2024 : [INF] File to update 'ob_flash_programming.bat'
+Mon Feb  5 19:04:16 2024 : [INF] Protection variable "SRAM2_ECC" will be updated with value "0x00000000"
+Mon Feb  5 19:04:16 2024 : [INF] The modification is not necessary
+Mon Feb  5 19:04:16 2024 : [INF] The variable has already the correct value (0)
+Mon Feb  5 19:04:17 2024 : [INF] ############## Executing flash command ##############
+Mon Feb  5 19:04:17 2024 : [INF] AppliCfg.exe flash -xml ./Config/STiRoT_Config.xml --name Number of images managed -b image_number --decimal ob_flash_programming.bat --vb
+Mon Feb  5 19:04:17 2024 : [INF] Opening the './Config/STiRoT_Config.xml' file
+Mon Feb  5 19:04:17 2024 : [INF] Searching the parameter with <Name>Number of images managed</Name>
+Mon Feb  5 19:04:17 2024 : [INF] Parameter found. Extracting information from '<Value>0x01</Value>'
+Mon Feb  5 19:04:17 2024 : [INF] The content recovered is '0x01'
+Mon Feb  5 19:04:17 2024 : [INF] Value to be used 1
+Mon Feb  5 19:04:17 2024 : [INF] File to update 'ob_flash_programming.bat'
+Mon Feb  5 19:04:17 2024 : [INF] Script variable "image_number" will be updated with value "1"
+Mon Feb  5 19:04:17 2024 : [INF] The file modification is not necessary
+Mon Feb  5 19:04:17 2024 : [INF] The variable has already the correct value (1)
+Script successfully updated according to STiRoT_Config.obk

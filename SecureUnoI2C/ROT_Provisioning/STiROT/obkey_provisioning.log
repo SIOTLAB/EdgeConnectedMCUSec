@@ -1,0 +1,177 @@
+
+C:\ST\SeniorDesignProjects\SecureUnoI2C\ROT_Provisioning\STiROT>call ../env.bat 
+Configure OBKeys HDPL1-DA config area
+      -------------------------------------------------------------------
+                       STM32CubeProgrammer v2.15.0                  
+      -------------------------------------------------------------------
+
+ST-LINK SN  : 003000473431510937393937
+ST-LINK FW  : V3J13M4
+Board       : STM32H573I-DK
+Voltage     : 3.29V
+SWD freq    : 8000 KHz
+Connect mode: Hot Plug
+Reset mode  : Software reset
+Device ID   : 0x484
+Revision ID : --
+Device name : STM32H5xx
+Flash size  : 2 MBytes
+Device type : MCU
+Device CPU  : Cortex-M33
+BL Version  : 0xE4
+SFSP Version: v2.5.0
+Debug in Low Power mode enabled
+
+
+Hard reset is performed
+      -------------------------------------------------------------------
+                       STM32CubeProgrammer v2.15.0                  
+      -------------------------------------------------------------------
+
+ST-LINK SN  : 003000473431510937393937
+ST-LINK FW  : V3J13M4
+Board       : STM32H573I-DK
+Voltage     : 3.29V
+SWD freq    : 8000 KHz
+Connect mode: Hot Plug
+Reset mode  : Software reset
+Device ID   : 0x484
+Revision ID : --
+Device name : STM32H5xx
+Flash size  : 2 MBytes
+Device type : MCU
+Device CPU  : Cortex-M33
+BL Version  : 0xE4
+SFSP Version: v2.5.0
+Debug in Low Power mode enabled
+
+ST-LINK SN  : 003000473431510937393937
+ST-LINK FW  : V3J13M4
+Board       : STM32H573I-DK
+Voltage     : 3.29V
+SWD freq    : 8000 KHz
+Connect mode: Hot Plug
+Reset mode  : Software reset
+Device ID   : 0x484
+Revision ID : --
+Secure Data Provisioning Start. OBK Input file : ./../DA/Binary/DA_Config.obk
+лллллллллллллллллллллллллллллллллллллллллллллллллл 100%
+OBKey Provisioned successfully
+
+Configure OBKeys HDPL1-ST-iRoT config area
+      -------------------------------------------------------------------
+                       STM32CubeProgrammer v2.15.0                  
+      -------------------------------------------------------------------
+
+ST-LINK SN  : 003000473431510937393937
+ST-LINK FW  : V3J13M4
+Board       : STM32H573I-DK
+Voltage     : 3.29V
+SWD freq    : 8000 KHz
+Connect mode: Hot Plug
+Reset mode  : Software reset
+Device ID   : 0x484
+Revision ID : --
+Device name : STM32H5xx
+Flash size  : 2 MBytes
+Device type : MCU
+Device CPU  : Cortex-M33
+BL Version  : 0xE4
+SFSP Version: v2.5.0
+Debug in Low Power mode enabled
+
+
+Hard reset is performed
+      -------------------------------------------------------------------
+                       STM32CubeProgrammer v2.15.0                  
+      -------------------------------------------------------------------
+
+ST-LINK SN  : 003000473431510937393937
+ST-LINK FW  : V3J13M4
+Board       : STM32H573I-DK
+Voltage     : 3.29V
+SWD freq    : 8000 KHz
+Connect mode: Hot Plug
+Reset mode  : Software reset
+Device ID   : 0x484
+Revision ID : --
+Device name : STM32H5xx
+Flash size  : 2 MBytes
+Device type : MCU
+Device CPU  : Cortex-M33
+BL Version  : 0xE4
+SFSP Version: v2.5.0
+Debug in Low Power mode enabled
+
+ST-LINK SN  : 003000473431510937393937
+ST-LINK FW  : V3J13M4
+Board       : STM32H573I-DK
+Voltage     : 3.29V
+SWD freq    : 8000 KHz
+Connect mode: Hot Plug
+Reset mode  : Software reset
+Device ID   : 0x484
+Revision ID : --
+Secure Data Provisioning Start. OBK Input file : ./Binary/STiRoT_Config.obk
+лллллллллллллллллллллллллллллллллллллллллллллллллл 100%
+OBKey Provisioned successfully
+
+Configure OBKeys HDPL1-ST-iRoT data area
+      -------------------------------------------------------------------
+                       STM32CubeProgrammer v2.15.0                  
+      -------------------------------------------------------------------
+
+ST-LINK SN  : 003000473431510937393937
+ST-LINK FW  : V3J13M4
+Board       : STM32H573I-DK
+Voltage     : 3.29V
+SWD freq    : 8000 KHz
+Connect mode: Hot Plug
+Reset mode  : Software reset
+Device ID   : 0x484
+Revision ID : --
+Device name : STM32H5xx
+Flash size  : 2 MBytes
+Device type : MCU
+Device CPU  : Cortex-M33
+BL Version  : 0xE4
+SFSP Version: v2.5.0
+Debug in Low Power mode enabled
+
+
+Hard reset is performed
+      -------------------------------------------------------------------
+                       STM32CubeProgrammer v2.15.0                  
+      -------------------------------------------------------------------
+
+ST-LINK SN  : 003000473431510937393937
+ST-LINK FW  : V3J13M4
+Board       : STM32H573I-DK
+Voltage     : 3.29V
+SWD freq    : 8000 KHz
+Connect mode: Hot Plug
+Reset mode  : Software reset
+Device ID   : 0x484
+Revision ID : --
+Device name : STM32H5xx
+Flash size  : 2 MBytes
+Device type : MCU
+Device CPU  : Cortex-M33
+BL Version  : 0xE4
+SFSP Version: v2.5.0
+Debug in Low Power mode enabled
+
+ST-LINK SN  : 003000473431510937393937
+ST-LINK FW  : V3J13M4
+Board       : STM32H573I-DK
+Voltage     : 3.29V
+SWD freq    : 8000 KHz
+Connect mode: Hot Plug
+Reset mode  : Software reset
+Device ID   : 0x484
+Revision ID : --
+Secure Data Provisioning Start. OBK Input file : ./Binary/STiRoT_Data.obk
+лллллллллллллллллллллллллллллллллллллллллллллллллл 100%
+OBKey Provisioned successfully
+
+Successful option bytes programming and images flashing

@@ -1,0 +1,10 @@
+Postbuild secure image 
+Creating secure image  
+      -------------------------------------------------------------------
+                       STM32 Trusted Package Creator v2.15.0                  
+      -------------------------------------------------------------------
+
+-pb C:\ST\SeniorDesignProjects\SecureUnoI2C\ROT_Provisioning\STiROT\Image\STiRoT_Code_Image.xml 
+ 
+Image generated successfully 
+
