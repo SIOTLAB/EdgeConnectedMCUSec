@@ -132,7 +132,7 @@ int main(void)
 		float distance; //written to via memcpy
 		uint8_t distanceBytes[4];
 
-		// Request 4 bytes of data from the slave device (Arduino)
+		// Request 4 bytes of data from the slave device (Arduino Uno)
 		if (HAL_I2C_Master_Receive(&hi2c1,
 				(uint16_t) (ARDUINO_I2C_ADDRESS << 1), distanceBytes,
 				sizeof(distanceBytes), HAL_MAX_DELAY) == HAL_OK) {
@@ -144,7 +144,7 @@ int main(void)
 			Error_Handler();
 		}
 
-		HAL_Delay(10); // Poll twice every second
+		HAL_Delay(10); // Poll every 10ms
 	}
   /* USER CODE END 3 */
 }
