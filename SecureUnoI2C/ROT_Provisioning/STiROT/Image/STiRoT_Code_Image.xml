@@ -115,10 +115,10 @@
         </Param>
         <Param>
             <Name>Firmware binary input file</Name>
-            <Value>../../../Secure/Debug/SecureUnoI2C_Secure.hex</Value>
+            <Value>../../../Secure\Debug\SecureUnoI2C_Secure.hex</Value>
             <Type>File</Type>
             <Tooltip>Select the firmware binary file to be processed for the image generation</Tooltip>
-            <Default>../../../Secure/Debug/SecureUnoI2C_Secure.hex</Default>
+            <Default>../../../Secure\Debug\SecureUnoI2C_Secure.hex</Default>
         </Param>
         <Output>
             <Name>Image output file</Name>
