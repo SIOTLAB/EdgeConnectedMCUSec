@@ -81,6 +81,16 @@ void flashLEDs(float distance) {
 		HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, ON);
 	}
 }
+
+void allLEDsOFF(void) {
+	HAL_GPIO_WritePin(GPIOI, LED1_Pin|LED2_Pin, OFF);
+	HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, OFF);
+}
+
+void allLEDsON(void) {
+	HAL_GPIO_WritePin(GPIOI, LED1_Pin|LED2_Pin, ON);
+	HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, ON);
+}
 /* USER CODE END 0 */
 
 /**
@@ -129,6 +139,9 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
+  long sampleCount = 0;
+  long sampleThreshold = 1000; //1k samples
+
   while (1) {
 	  float distance; //written to via memcpy
 	  uint8_t distanceBytes[4];
@@ -140,9 +153,16 @@ int main(void)
 		  // Convert received bytes back to float
 		  memcpy(&distance, distanceBytes, sizeof(distance));
 		  // Now you can use the distance variable as needed
-		  flashLEDs(distance);
+		  allLEDsON();
+//		  flashLEDs(distance);
+		  sampleCount++;
 	  } else {
 		  Error_Handler();
+	  }
+
+	  if (sampleCount > sampleThreshold) {
+		  allLEDsOFF();
+		  break;
 	  }
 
 	  HAL_Delay(10); // Poll every 10ms

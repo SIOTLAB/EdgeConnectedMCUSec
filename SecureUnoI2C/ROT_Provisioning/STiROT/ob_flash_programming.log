@@ -168,7 +168,7 @@ OPTION BYTE PROGRAMMING VERIFICATION:
 
 Option Bytes successfully programmed
 
-Time elapsed during option Bytes configuration: 00:00:03.487
+Time elapsed during option Bytes configuration: 00:00:03.474
 Remove Protection and erase All
       -------------------------------------------------------------------
                        STM32CubeProgrammer v2.15.0                  
@@ -353,7 +353,7 @@ OPTION BYTE PROGRAMMING VERIFICATION:
 
 Option Bytes successfully programmed
 
-Time elapsed during option Bytes configuration: 00:00:01.890
+Time elapsed during option Bytes configuration: 00:00:01.897
 
 Mass erase ... 
 
@@ -449,7 +449,7 @@ Warning: Option Byte: sram2_ecc, value: 0x0, was not modified.
 Warning: Option Byte: sram2_rst, value: 0x0, was not modified.
 
 Warning: Option Bytes are unchanged, Data won't be downloaded
-Time elapsed during option Bytes configuration: 00:00:00.015
+Time elapsed during option Bytes configuration: 00:00:00.014
 Define secure area through watermarks
       -------------------------------------------------------------------
                        STM32CubeProgrammer v2.15.0                  
@@ -614,7 +614,7 @@ OPTION BYTE PROGRAMMING VERIFICATION:
 
 Option Bytes successfully programmed
 
-Time elapsed during option Bytes configuration: 00:00:01.808
+Time elapsed during option Bytes configuration: 00:00:01.788
       -------------------------------------------------------------------
                        STM32CubeProgrammer v2.15.0                  
       -------------------------------------------------------------------
@@ -779,7 +779,7 @@ OPTION BYTE PROGRAMMING VERIFICATION:
 
 Option Bytes successfully programmed
 
-Time elapsed during option Bytes configuration: 00:00:01.774
+Time elapsed during option Bytes configuration: 00:00:01.778
 Download the code image in the download slots
       -------------------------------------------------------------------
                        STM32CubeProgrammer v2.15.0                  
@@ -817,7 +817,7 @@ Download in Progress:
 ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 0%€€€€€€€€€€€€€€€€€€€€€€€ 46%€€€€€€€€€€€€€€€€€€€€€€€ 92%€€€€ 100%
 
 File download complete
-Time elapsed during download operation: 00:00:02.464
+Time elapsed during download operation: 00:00:02.425
 Set UBE for ST-iRoT
       -------------------------------------------------------------------
                        STM32CubeProgrammer v2.15.0                  
@@ -908,7 +908,7 @@ PROGRAMMING OPTION BYTES AREA ...
 Warning: Option Byte: boot_ube, value: 0xC3, was not modified.
 
 Warning: Option Bytes are unchanged, Data won't be downloaded
-Time elapsed during option Bytes configuration: 00:00:00.014
+Time elapsed during option Bytes configuration: 00:00:00.015
 Set SECBOOT_LOCK option byte
       -------------------------------------------------------------------
                        STM32CubeProgrammer v2.15.0                  
@@ -1073,5 +1073,5 @@ OPTION BYTE PROGRAMMING VERIFICATION:
 
 Option Bytes successfully programmed
 
-Time elapsed during option Bytes configuration: 00:00:01.792
+Time elapsed during option Bytes configuration: 00:00:01.789
 Programming success

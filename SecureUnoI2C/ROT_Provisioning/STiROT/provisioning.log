@@ -165,7 +165,7 @@ OPTION BYTE PROGRAMMING VERIFICATION:
 
 Option Bytes successfully programmed
 
-Time elapsed during option Bytes configuration: 00:00:03.926
+Time elapsed during option Bytes configuration: 00:00:03.888
 "C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeProgrammer\bin\STM32_Programmer_CLI.exe" -c port=SWD speed=fast ap=1 mode=Hotplug -ob PRODUCT_STATE=0x72 
       -------------------------------------------------------------------
                        STM32CubeProgrammer v2.15.0                  
@@ -278,4 +278,4 @@ UPLOADING OPTION BYTES DATA ...
 Error: Uploading Option Bytes bank: 0 failed
 Error: Reloading Option Bytes Data failed
 
-Time elapsed during option Bytes configuration: 00:00:10.336
+Time elapsed during option Bytes configuration: 00:00:10.300
