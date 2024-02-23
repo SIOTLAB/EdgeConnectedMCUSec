@@ -151,7 +151,7 @@ int main(void)
 			memcpy(&distance, distanceBytes, sizeof(distance));
 			// Now you can use the distance variable as needed
 			allLEDsON();
-			//		  flashLEDs(distance);
+//			flashLEDs(distance);
 			sampleCount++;
 		} else {
 			Error_Handler();
@@ -162,7 +162,7 @@ int main(void)
 			break;
 		}
 
-		HAL_Delay(10); // Poll every 10ms
+		HAL_Delay(1); // Poll every 1 ms
 	}
 	/* USER CODE END 3 */
 }
