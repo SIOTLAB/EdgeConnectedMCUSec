@@ -165,7 +165,7 @@ int main(void)
 		  break;
 	  }
 
-	  HAL_Delay(10); // Poll every 10ms
+	  HAL_Delay(1); // Poll every 10ms
   }
   /* USER CODE END 3 */
 }

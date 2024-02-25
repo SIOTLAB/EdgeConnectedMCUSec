@@ -165,7 +165,7 @@ OPTION BYTE PROGRAMMING VERIFICATION:
 
 Option Bytes successfully programmed
 
-Time elapsed during option Bytes configuration: 00:00:03.888
+Time elapsed during option Bytes configuration: 00:00:03.484
 "C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeProgrammer\bin\STM32_Programmer_CLI.exe" -c port=SWD speed=fast ap=1 mode=Hotplug -ob PRODUCT_STATE=0x72 
       -------------------------------------------------------------------
                        STM32CubeProgrammer v2.15.0                  
@@ -174,7 +174,7 @@ Time elapsed during option Bytes configuration: 00:00:03.888
 ST-LINK SN  : 003000473431510937393937
 ST-LINK FW  : V3J13M4
 Board       : STM32H573I-DK
-Voltage     : 3.30V
+Voltage     : 3.29V
 SWD freq    : 8000 KHz
 Connect mode: Hot Plug
 Reset mode  : Software reset
@@ -278,4 +278,4 @@ UPLOADING OPTION BYTES DATA ...
 Error: Uploading Option Bytes bank: 0 failed
 Error: Reloading Option Bytes Data failed
 
-Time elapsed during option Bytes configuration: 00:00:10.300
+Time elapsed during option Bytes configuration: 00:00:10.138

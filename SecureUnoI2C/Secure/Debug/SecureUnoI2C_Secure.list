@@ -236,8 +236,8 @@ int main(void)
 		  break;
 	  }
 
-	  HAL_Delay(10); // Poll every 10ms
- c00074a:	200a      	movs	r0, #10
+	  HAL_Delay(1); // Poll every 10ms
+ c00074a:	2001      	movs	r0, #1
  c00074c:	f000 fec2 	bl	c0014d4 <HAL_Delay>
   while (1) {
  c000750:	e7dd      	b.n	c00070e <main+0x32>
