@@ -168,7 +168,7 @@ OPTION BYTE PROGRAMMING VERIFICATION:
 
 Option Bytes successfully programmed
 
-Time elapsed during option Bytes configuration: 00:00:03.049
+Time elapsed during option Bytes configuration: 00:00:03.183
 Remove Protection and erase All
       -------------------------------------------------------------------
                        STM32CubeProgrammer v2.15.0                  
@@ -177,7 +177,7 @@ Remove Protection and erase All
 ST-LINK SN  : 003000473431510937393937
 ST-LINK FW  : V3J13M4
 Board       : STM32H573I-DK
-Voltage     : 3.29V
+Voltage     : 3.30V
 SWD freq    : 8000 KHz
 Connect mode: Under Reset
 Reset mode  : Hardware reset
@@ -353,7 +353,7 @@ OPTION BYTE PROGRAMMING VERIFICATION:
 
 Option Bytes successfully programmed
 
-Time elapsed during option Bytes configuration: 00:00:01.670
+Time elapsed during option Bytes configuration: 00:00:01.711
 
 Mass erase ... 
 
@@ -366,7 +366,7 @@ Mass erase successfully achieved
 ST-LINK SN  : 003000473431510937393937
 ST-LINK FW  : V3J13M4
 Board       : STM32H573I-DK
-Voltage     : 3.29V
+Voltage     : 3.30V
 SWD freq    : 8000 KHz
 Connect mode: Hot Plug
 Reset mode  : Software reset
@@ -449,7 +449,7 @@ Warning: Option Byte: sram2_ecc, value: 0x0, was not modified.
 Warning: Option Byte: sram2_rst, value: 0x0, was not modified.
 
 Warning: Option Bytes are unchanged, Data won't be downloaded
-Time elapsed during option Bytes configuration: 00:00:00.010
+Time elapsed during option Bytes configuration: 00:00:00.012
 Define secure area through watermarks
       -------------------------------------------------------------------
                        STM32CubeProgrammer v2.15.0                  
@@ -614,7 +614,7 @@ OPTION BYTE PROGRAMMING VERIFICATION:
 
 Option Bytes successfully programmed
 
-Time elapsed during option Bytes configuration: 00:00:01.565
+Time elapsed during option Bytes configuration: 00:00:01.618
       -------------------------------------------------------------------
                        STM32CubeProgrammer v2.15.0                  
       -------------------------------------------------------------------
@@ -779,7 +779,7 @@ OPTION BYTE PROGRAMMING VERIFICATION:
 
 Option Bytes successfully programmed
 
-Time elapsed during option Bytes configuration: 00:00:01.556
+Time elapsed during option Bytes configuration: 00:00:01.607
 Download the code image in the download slots
       -------------------------------------------------------------------
                        STM32CubeProgrammer v2.15.0                  
@@ -817,7 +817,7 @@ Download in Progress:
 ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±± 0%€€€€€€€€€€€€€€€€€€€€€€€ 46%€€€€€€€€€€€€€€€€€€€€€€€ 92%€€€€ 100%
 
 File download complete
-Time elapsed during download operation: 00:00:01.838
+Time elapsed during download operation: 00:00:01.967
 Set UBE for ST-iRoT
       -------------------------------------------------------------------
                        STM32CubeProgrammer v2.15.0                  
@@ -908,7 +908,7 @@ PROGRAMMING OPTION BYTES AREA ...
 Warning: Option Byte: boot_ube, value: 0xC3, was not modified.
 
 Warning: Option Bytes are unchanged, Data won't be downloaded
-Time elapsed during option Bytes configuration: 00:00:00.011
+Time elapsed during option Bytes configuration: 00:00:00.015
 Set SECBOOT_LOCK option byte
       -------------------------------------------------------------------
                        STM32CubeProgrammer v2.15.0                  
@@ -1073,5 +1073,5 @@ OPTION BYTE PROGRAMMING VERIFICATION:
 
 Option Bytes successfully programmed
 
-Time elapsed during option Bytes configuration: 00:00:01.562
+Time elapsed during option Bytes configuration: 00:00:01.628
 Programming success

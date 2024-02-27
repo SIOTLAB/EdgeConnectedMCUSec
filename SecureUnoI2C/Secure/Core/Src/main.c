@@ -32,6 +32,8 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define ARDUINO_I2C_ADDRESS 0x02 // The I2C address of the Arduino
+#define LOW GPIO_PIN_RESET
+#define HIGH GPIO_PIN_SET
 #define ON GPIO_PIN_RESET
 #define OFF GPIO_PIN_SET
 /* USER CODE END PD */
@@ -91,6 +93,14 @@ void allLEDsON(void) {
 	HAL_GPIO_WritePin(GPIOI, LED1_Pin|LED2_Pin, ON);
 	HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, ON);
 }
+
+void startTiming(void) {
+	HAL_GPIO_WritePin(PINOUT_GPIO_Port, PINOUT_Pin, HIGH);
+}
+
+void stopTiming(void) {
+	HAL_GPIO_WritePin(PINOUT_GPIO_Port, PINOUT_Pin, LOW);
+}
 /* USER CODE END 0 */
 
 /**
@@ -141,7 +151,7 @@ int main(void)
 
   long sampleCount = 0;
   long sampleThreshold = 1000; //1k samples
-
+  startTiming();
   while (1) {
 	  float distance; //written to via memcpy
 	  uint8_t distanceBytes[4];
@@ -153,7 +163,7 @@ int main(void)
 		  // Convert received bytes back to float
 		  memcpy(&distance, distanceBytes, sizeof(distance));
 		  // Now you can use the distance variable as needed
-		  allLEDsON();
+//		  allLEDsON();
 //		  flashLEDs(distance);
 		  sampleCount++;
 	  } else {
@@ -161,7 +171,8 @@ int main(void)
 	  }
 
 	  if (sampleCount > sampleThreshold) {
-		  allLEDsOFF();
+//		  allLEDsOFF();
+		  stopTiming();
 		  break;
 	  }
 
@@ -372,6 +383,9 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, OFF);
 
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(PINOUT_GPIO_Port, PINOUT_Pin, GPIO_PIN_RESET);
+
   /*Configure GPIO pins : LED1_Pin LED2_Pin */
   GPIO_InitStruct.Pin = LED1_Pin|LED2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -385,6 +399,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PINOUT_Pin */
+  GPIO_InitStruct.Pin = PINOUT_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+  HAL_GPIO_Init(PINOUT_GPIO_Port, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
@@ -405,6 +426,10 @@ void Error_Handler(void)
   __disable_irq();
   while (1)
   {
+	  HAL_GPIO_WritePin(GPIOF, LED3_Pin, ON);
+	  HAL_Delay(750);
+	  HAL_GPIO_WritePin(GPIOF, LED3_Pin, OFF);
+	  HAL_Delay(750);
   }
   /* USER CODE END Error_Handler_Debug */
 }

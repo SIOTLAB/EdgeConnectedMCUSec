@@ -48,7 +48,7 @@ Debug in Low Power mode enabled
 ST-LINK SN  : 003000473431510937393937
 ST-LINK FW  : V3J13M4
 Board       : STM32H573I-DK
-Voltage     : 3.29V
+Voltage     : 3.30V
 SWD freq    : 8000 KHz
 Connect mode: Hot Plug
 Reset mode  : Software reset
@@ -66,7 +66,7 @@ Configure OBKeys HDPL1-ST-iRoT config area
 ST-LINK SN  : 003000473431510937393937
 ST-LINK FW  : V3J13M4
 Board       : STM32H573I-DK
-Voltage     : 3.30V
+Voltage     : 3.29V
 SWD freq    : 8000 KHz
 Connect mode: Hot Plug
 Reset mode  : Software reset
@@ -106,7 +106,7 @@ Debug in Low Power mode enabled
 ST-LINK SN  : 003000473431510937393937
 ST-LINK FW  : V3J13M4
 Board       : STM32H573I-DK
-Voltage     : 3.29V
+Voltage     : 3.30V
 SWD freq    : 8000 KHz
 Connect mode: Hot Plug
 Reset mode  : Software reset
@@ -147,7 +147,7 @@ Hard reset is performed
 ST-LINK SN  : 003000473431510937393937
 ST-LINK FW  : V3J13M4
 Board       : STM32H573I-DK
-Voltage     : 3.29V
+Voltage     : 3.30V
 SWD freq    : 8000 KHz
 Connect mode: Hot Plug
 Reset mode  : Software reset
@@ -164,7 +164,7 @@ Debug in Low Power mode enabled
 ST-LINK SN  : 003000473431510937393937
 ST-LINK FW  : V3J13M4
 Board       : STM32H573I-DK
-Voltage     : 3.30V
+Voltage     : 3.29V
 SWD freq    : 8000 KHz
 Connect mode: Hot Plug
 Reset mode  : Software reset
