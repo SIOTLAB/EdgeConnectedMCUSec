@@ -32,6 +32,8 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define ARDUINO_I2C_ADDRESS 0x02 // The I2C address of the Arduino
+#define LOW GPIO_PIN_RESET
+#define HIGH GPIO_PIN_SET
 #define ON GPIO_PIN_RESET
 #define OFF GPIO_PIN_SET
 /* USER CODE END PD */
@@ -74,19 +76,19 @@ void flashLEDs(float distance) {
 //	HAL_GPIO_TogglePin(GPIOF, GPIO_PIN_4);
 
 	if (distance > 500) {
-		HAL_GPIO_WritePin(GPIOI, LED1_Pin, ON);
-		HAL_GPIO_WritePin(GPIOI, LED2_Pin, OFF);
-		HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, OFF);
+		HAL_GPIO_WritePin(GPIOI, LED1_Pin, LOW);
+		HAL_GPIO_WritePin(GPIOI, LED2_Pin, HIGH);
+		HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, HIGH);
 	} else if (distance > 100) {
-		HAL_GPIO_WritePin(GPIOI, LED1_Pin|LED2_Pin, ON);
-		HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, OFF);
+		HAL_GPIO_WritePin(GPIOI, LED1_Pin|LED2_Pin, LOW);
+		HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, HIGH);
 	} else if (distance > 50) {
-		HAL_GPIO_WritePin(GPIOI, LED1_Pin|LED2_Pin, ON);
-		HAL_GPIO_WritePin(GPIOF, LED3_Pin, ON);
-		HAL_GPIO_WritePin(GPIOF, LED4_Pin, OFF);
+		HAL_GPIO_WritePin(GPIOI, LED1_Pin|LED2_Pin, LOW);
+		HAL_GPIO_WritePin(GPIOF, LED3_Pin, LOW);
+		HAL_GPIO_WritePin(GPIOF, LED4_Pin, HIGH);
 	} else {
-		HAL_GPIO_WritePin(GPIOI, LED1_Pin|LED2_Pin, ON);
-		HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, ON);
+		HAL_GPIO_WritePin(GPIOI, LED1_Pin|LED2_Pin, LOW);
+		HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, LOW);
 	}
 }
 
@@ -98,6 +100,14 @@ void allLEDsOFF(void) {
 void allLEDsON(void) {
 	HAL_GPIO_WritePin(GPIOI, LED1_Pin|LED2_Pin, ON);
 	HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, ON);
+}
+
+void startTiming(void) {
+	HAL_GPIO_WritePin(PINOUT_GPIO_Port, PINOUT_Pin, HIGH);
+}
+
+void stopTiming(void) {
+	HAL_GPIO_WritePin(PINOUT_GPIO_Port, PINOUT_Pin, LOW);
 }
 
 /* USER CODE END 0 */
@@ -129,16 +139,17 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
-	MX_GPIO_Init();
-	MX_I2C1_Init();
-	/* USER CODE BEGIN 2 */
+  MX_GPIO_Init();
+  MX_I2C1_Init();
+  /* USER CODE BEGIN 2 */
 //  int ret = HAL_I2C_Master_Transmit(&hi2c1,20,TX_Buffer,1,1000); //blocking mode
 //    HAL_Delay(100);
-	/* USER CODE END 2 */
+  /* USER CODE END 2 */
 
 	long sampleCount = 0;
 	long sampleThreshold = 1000; //1k samples
-
+	startTiming();
+//	allLEDsON();
 	while (1) {
 		float distance; //written to via memcpy
 		uint8_t distanceBytes[4];
@@ -150,7 +161,6 @@ int main(void)
 			// Convert received bytes back to float
 			memcpy(&distance, distanceBytes, sizeof(distance));
 			// Now you can use the distance variable as needed
-			allLEDsON();
 //			flashLEDs(distance);
 			sampleCount++;
 		} else {
@@ -158,7 +168,8 @@ int main(void)
 		}
 
 		if (sampleCount > sampleThreshold) {
-			allLEDsOFF();
+//			allLEDsOFF();
+			stopTiming();
 			break;
 		}
 
@@ -285,10 +296,13 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOF_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOI, LED1_Pin|LED2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOI, LED1_Pin|LED2_Pin, HIGH);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, HIGH);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(PINOUT_GPIO_Port, PINOUT_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : LED1_Pin */
   GPIO_InitStruct.Pin = LED1_Pin;
@@ -311,6 +325,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : PINOUT_Pin */
+  GPIO_InitStruct.Pin = PINOUT_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+  HAL_GPIO_Init(PINOUT_GPIO_Port, &GPIO_InitStruct);
+
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
 }
@@ -330,6 +351,11 @@ void Error_Handler(void)
   __disable_irq();
   while (1)
   {
+	  //blink RED LED
+	  HAL_GPIO_WritePin(GPIOF, LED3_Pin, ON);
+	  HAL_Delay(750);
+	  HAL_GPIO_WritePin(GPIOF, LED3_Pin, OFF);
+	  HAL_Delay(750);
   }
   /* USER CODE END Error_Handler_Debug */
 }
