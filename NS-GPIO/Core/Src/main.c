@@ -31,7 +31,10 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define LOW GPIO_PIN_RESET
+#define HIGH GPIO_PIN_SET
+#define ON GPIO_PIN_RESET
+#define OFF GPIO_PIN_SET
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -54,7 +57,23 @@ static void MX_GPIO_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void allLEDsOFF(void) {
+	HAL_GPIO_WritePin(GPIOI, LED1_Pin|LED2_Pin, OFF);
+	HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, OFF);
+}
 
+void allLEDsON(void) {
+	HAL_GPIO_WritePin(GPIOI, LED1_Pin|LED2_Pin, ON);
+	HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, ON);
+}
+
+void startTiming(void) {
+	HAL_GPIO_WritePin(PINOUT_GPIO_Port, PINOUT_Pin, HIGH);
+}
+
+void stopTiming(void) {
+	HAL_GPIO_WritePin(PINOUT_GPIO_Port, PINOUT_Pin, LOW);
+}
 /* USER CODE END 0 */
 
 /**
@@ -94,7 +113,18 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+	  int i;
+	  startTiming();
+	  allLEDsOFF();
+	  for (i = 0; i < 20; i++) {
+		  allLEDsON();
+		  HAL_Delay(50);
+		  allLEDsOFF();
+		  HAL_Delay(50);
+	  }
+	  allLEDsOFF();
+	  stopTiming();
+	  break; //don't loop infinitely
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -162,13 +192,13 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOI, LED1_Pin|LED2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOI, LED1_Pin|LED2_Pin, OFF);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, OFF);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(PINOUT_GPIO_Port, PINOUT_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(PINOUT_GPIO_Port, PINOUT_Pin, LOW);
 
   /*Configure GPIO pins : LED1_Pin LED2_Pin */
   GPIO_InitStruct.Pin = LED1_Pin|LED2_Pin;
