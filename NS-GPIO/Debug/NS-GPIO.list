@@ -198,26 +198,27 @@ int main(void)
  800031e:	f7ff ffdd 	bl	80002dc <startTiming>
 	  allLEDsOFF();
  8000322:	f7ff ffb3 	bl	800028c <allLEDsOFF>
-	  for (i = 0; i < 20; i++) {
+	  // time spent on delay 30 * (25+25) = 1500 ms = 1.5 sec
+	  for (i = 0; i < 30; i++) {
  8000326:	2300      	movs	r3, #0
  8000328:	607b      	str	r3, [r7, #4]
  800032a:	e00c      	b.n	8000346 <main+0x3a>
 		  allLEDsON();
  800032c:	f7ff ffc2 	bl	80002b4 <allLEDsON>
-		  HAL_Delay(50);
- 8000330:	2032      	movs	r0, #50	; 0x32
+		  HAL_Delay(25);
+ 8000330:	2019      	movs	r0, #25
  8000332:	f000 fa45 	bl	80007c0 <HAL_Delay>
 		  allLEDsOFF();
  8000336:	f7ff ffa9 	bl	800028c <allLEDsOFF>
-		  HAL_Delay(50);
- 800033a:	2032      	movs	r0, #50	; 0x32
+		  HAL_Delay(25);
+ 800033a:	2019      	movs	r0, #25
  800033c:	f000 fa40 	bl	80007c0 <HAL_Delay>
-	  for (i = 0; i < 20; i++) {
+	  for (i = 0; i < 30; i++) {
  8000340:	687b      	ldr	r3, [r7, #4]
  8000342:	3301      	adds	r3, #1
  8000344:	607b      	str	r3, [r7, #4]
  8000346:	687b      	ldr	r3, [r7, #4]
- 8000348:	2b13      	cmp	r3, #19
+ 8000348:	2b1d      	cmp	r3, #29
  800034a:	ddef      	ble.n	800032c <main+0x20>
 	  }
 	  allLEDsOFF();

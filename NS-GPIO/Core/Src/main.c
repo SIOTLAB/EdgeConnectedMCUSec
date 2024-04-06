@@ -116,11 +116,12 @@ int main(void)
 	  int i;
 	  startTiming();
 	  allLEDsOFF();
-	  for (i = 0; i < 20; i++) {
+	  // time spent on delay 30 * (25+25) = 1500 ms = 1.5 sec
+	  for (i = 0; i < 30; i++) {
 		  allLEDsON();
-		  HAL_Delay(50);
+		  HAL_Delay(25);
 		  allLEDsOFF();
-		  HAL_Delay(50);
+		  HAL_Delay(25);
 	  }
 	  allLEDsOFF();
 	  stopTiming();
