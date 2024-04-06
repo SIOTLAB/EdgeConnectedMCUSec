@@ -536,11 +536,12 @@ static void MX_GPIO_Init(void)
  80004fe:	f000 fca1 	bl	8000e44 <HAL_GPIO_WritePin>
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(PINOUT_GPIO_Port, PINOUT_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(PINOUT_GPIO_Port, PINOUT_Pin, LOW);
  8000502:	2200      	movs	r2, #0
  8000504:	2101      	movs	r1, #1
  8000506:	4823      	ldr	r0, [pc, #140]	; (8000594 <MX_GPIO_Init+0x118>)
  8000508:	f000 fc9c 	bl	8000e44 <HAL_GPIO_WritePin>
+
 
   /*Configure GPIO pin : LED1_Pin */
   GPIO_InitStruct.Pin = LED1_Pin;

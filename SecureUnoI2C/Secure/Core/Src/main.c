@@ -384,7 +384,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOF, LED3_Pin|LED4_Pin, OFF);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(PINOUT_GPIO_Port, PINOUT_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(PINOUT_GPIO_Port, PINOUT_Pin, LOW);
 
   /*Configure GPIO pins : LED1_Pin LED2_Pin */
   GPIO_InitStruct.Pin = LED1_Pin|LED2_Pin;
@@ -427,8 +427,10 @@ void Error_Handler(void)
   while (1)
   {
 	  HAL_GPIO_WritePin(GPIOF, LED3_Pin, ON);
+	  HAL_GPIO_WritePin(GPIOF, LED2_Pin, ON);
 	  HAL_Delay(750);
 	  HAL_GPIO_WritePin(GPIOF, LED3_Pin, OFF);
+	  HAL_GPIO_WritePin(GPIOF, LED2_Pin, OFF);
 	  HAL_Delay(750);
   }
   /* USER CODE END Error_Handler_Debug */
