@@ -149,10 +149,10 @@ int main(void)
 	long sampleCount = 0;
 	long sampleThreshold = 1000; //1k samples
 	startTiming();
-//	allLEDsON();
 	while (1) {
 		float distance; //written to via memcpy
-		uint8_t distanceBytes[4];
+		uint8_t distanceBytes[4]; //32 bits total, or 4 bytes
+		// sent 1000 times --> 4000 bytes
 
 		// Request 4 bytes of data from the slave device (Arduino Uno)
 		if (HAL_I2C_Master_Receive(&hi2c1,
@@ -160,15 +160,12 @@ int main(void)
 				sizeof(distanceBytes), HAL_MAX_DELAY) == HAL_OK) {
 			// Convert received bytes back to float
 			memcpy(&distance, distanceBytes, sizeof(distance));
-			// Now you can use the distance variable as needed
-//			flashLEDs(distance);
 			sampleCount++;
 		} else {
 			Error_Handler();
 		}
 
 		if (sampleCount > sampleThreshold) {
-//			allLEDsOFF();
 			stopTiming();
 			break;
 		}
