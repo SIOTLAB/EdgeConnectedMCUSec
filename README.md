@@ -14,13 +14,13 @@ This project utilizes the STM32 toolchain and Nordic Semiconductor PPK II along 
 
 To navigate to source code, choose a project (i.e UnoI2C) and select the `Core` directory for non-secure projects or the `Secure` directory and then the `Core` directory for secure projects. Within `Core` there should be an `Src` folder which contains the code used to in the selected application. 
 
-## Getting Started
+## How-To Guide
 
 **<span style="text-decoration:underline;">Developing Purely Secure/Non-Secure Applications</span>**
 
 Adapted from: [https://wiki.st.com/stm32mcu/wiki/Security:How_to_start_with_STM32CubeMX_STiRoT_Boot_path_on_STM32H57](https://wiki.st.com/stm32mcu/wiki/Security:How_to_start_with_STM32CubeMX_STiRoT_Boot_path_on_STM32H57)
 
-**STM32CubeMX**
+### STM32CubeMX
 
 
 
@@ -78,7 +78,7 @@ Back in the _Project Manager_ tab…
 5. Generate Code > Yes
 6. Then click “Open Project” on the popup
 
-**STM32 Cube IDE**
+### STM32 CubeIDE
 
 
 
@@ -88,7 +88,6 @@ Back in the _Project Manager_ tab…
     1. Note: Secure code needs to be compiled BEFORE nonsecure code!
 
 For device provisioning…
-
 
 
 1. Connect the board to computer through USB_STLink connector
@@ -105,8 +104,6 @@ Note: Can also fully erase board like a factory reset in CubeProgrammer as well
 
 **Go to STM32CubeProgrammer**
 
-
-
 1. Make sure the board is connected via ST-LINK
     1. If not found:
         1. Go to menu bar → Parallels Icon → Devices → USB/Bluetooth → Select STLINKV3
@@ -118,9 +115,7 @@ Note: Can also fully erase board like a factory reset in CubeProgrammer as well
     3. A success message should appear
 6. Don't forget to disconnect ST-LINK (it connect automatically on success) 
 
-**Cloning project from GitHub**
-
-
+### Cloning Project from GitHub
 
 1. Find .project file in File Explorer and double click to open in STM32 IDE
 2. Build project
@@ -132,7 +127,7 @@ Note: Can also fully erase board like a factory reset in CubeProgrammer as well
         3. Then rebuild project
     3. Don’t forget to install python as well (from command line type python > ENTER, install from Microsoft store)
 
-**<span style="text-decoration:underline;">Creating a non-secure application with default Secure Manager</span>**
+### Creating a non-secure application with default Secure Manager
 
 [https://wiki.st.com/stm32mcu/wiki/Security:How_to_start_with_Secure_Manager_default_configuration_on_STM32H5](https://wiki.st.com/stm32mcu/wiki/Security:How_to_start_with_Secure_Manager_default_configuration_on_STM32H5)
 
