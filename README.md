@@ -24,7 +24,7 @@ Adapted from this link: [https://wiki.st.com/stm32mcu/wiki/Security:How_to_start
 
 
 
-1. Click on _Access to MCU Selector _and select our device, the STM32H573I-DK, from the _Series _column
+1. Click on _Access to MCU Selector_ and select our device, the STM32H573I-DK, from the _Series_ column
 2. Create the project and enable TrustZone
 3. Specify project name and path
     1. Select Secure or Non-secure project based on the use case (could be both then select both)
@@ -50,11 +50,11 @@ Once the project has been created…
         5. See layout page 12 for more details
     7. Don't forget to reserve pins if needed
     8. Enter user labels for reserved pins for easy identification in the generated code
-3. In _System Core _it will show what pins are configured for what
-4. In _Boot Path and Debug Authentication_ > _Select _> STiRoT > Secure Application
+3. In _System Core_ it will show what pins are configured for what
+4. In _Boot Path and Debug Authentication_ > _Select_ > STiRoT > Secure Application
     9. Click on Finish and OK on the popup
     10. Note: This does not need to be done for purely NS
-5. Select _Edit Config Files _(Opens the TPC)
+5. Select _Edit Config Files_ (Opens the TPC)
 
 In the TPC…
 
@@ -66,15 +66,15 @@ In the TPC…
     2. Note: If you define your own code, you need to change the sizes and default settings to match your code size and regenerate OBKeys (our mistake before lol)
 3. Close TPC
 
-Back in the _Project Manager _tab…
+Back in the _Project Manager_ tab…
 
 
 
-1. In _Boot Path and Debug Authentication _> _Configure_
+1. In _Boot Path and Debug Authentication_ > _Configure_
     1. Note: key may need to be regenerated but USUALLY NOT, otherwise VERY IMPORTANT to not lose the key!! (ok for this example to leave as is)
 2. Opens TPC again, then _Generate OBKey_
 3. Close TPC
-4. In Project Manager > _Signature _make sure Sign Binaries is selected
+4. In Project Manager > _Signature_ make sure Sign Binaries is selected
 5. Generate Code > Yes
 6. Then click “Open Project” on the popup
 
