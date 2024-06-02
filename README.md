@@ -18,7 +18,7 @@ To navigate to source code, choose a project (i.e UnoI2C) and select the `Core` 
 
 **<span style="text-decoration:underline;">Developing Purely Secure/Non-Secure Applications</span>**
 
-Adapted from this link: [https://wiki.st.com/stm32mcu/wiki/Security:How_to_start_with_STM32CubeMX_STiRoT_Boot_path_on_STM32H57](https://wiki.st.com/stm32mcu/wiki/Security:How_to_start_with_STM32CubeMX_STiRoT_Boot_path_on_STM32H57)
+Adapted from: [https://wiki.st.com/stm32mcu/wiki/Security:How_to_start_with_STM32CubeMX_STiRoT_Boot_path_on_STM32H57](https://wiki.st.com/stm32mcu/wiki/Security:How_to_start_with_STM32CubeMX_STiRoT_Boot_path_on_STM32H57)
 
 **STM32CubeMX**
 
