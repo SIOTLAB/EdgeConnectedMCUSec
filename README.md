@@ -12,7 +12,7 @@ This project utilizes the STM32 toolchain and Nordic Semiconductor PPK II along 
 
 ## Navigation
 
-To navigate to source code, choose a project (i.e UnoI2C) and select the `Core` directory for non-secure projects or the `Secure` directory and then the `Core` directory for secure projects. Within `Core` there should be an `Src` folder which contains the code used to build the selected application. 
+To navigate to source code, choose a project (i.e UnoI2C) and select the `Core` directory for non-secure projects or the `Secure` directory and then the `Core` directory for secure projects. Within `Core` there should be an `Src` folder which contains the code used to in the selected application. 
 
 ## Getting Started
 
