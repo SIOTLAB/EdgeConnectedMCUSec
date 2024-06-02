@@ -46,7 +46,7 @@ Once the project has been created…
         2. LED2 is PI8
         3. LED3 is PF1
         4. LED4 is PF4
-        5. See layout page 12 for more details
+        5. See [layout](https://www.st.com/content/ccc/resource/technical/layouts_and_diagrams/schematic_pack/group2/a9/96/52/b1/46/f6/4e/b9/mb1677-h573i-c02-schematic/files/mb1677-h573i-c02-schematic.pdf/jcr:content/translations/en.mb1677-h573i-c02-schematic.pdf) page 12 for more details
     3. Don't forget to reserve pins if needed
     4. Enter user labels for reserved pins for easy identification in the generated code
     5. Refer to the [Hardware Layout Page 3](https://www.st.com/content/ccc/resource/technical/layouts_and_diagrams/schematic_pack/group2/a9/96/52/b1/46/f6/4e/b9/mb1677-h573i-c02-schematic/files/mb1677-h573i-c02-schematic.pdf/jcr:content/translations/en.mb1677-h573i-c02-schematic.pdf) for pin layouts
