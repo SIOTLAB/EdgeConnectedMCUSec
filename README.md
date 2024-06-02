@@ -40,16 +40,16 @@ Once the project has been created…
     2. Optional but recommended: Enter a user label for pins
     3. Note: External documentation to know which LEDs to use
 2. For pin reservation for I<sup>2</sup>C and others
-    4. **Refer to the [Hardware Layout Page 3](https://www.st.com/content/ccc/resource/technical/layouts_and_diagrams/schematic_pack/group2/a9/96/52/b1/46/f6/4e/b9/mb1677-h573i-c02-schematic/files/mb1677-h573i-c02-schematic.pdf/jcr:content/translations/en.mb1677-h573i-c02-schematic.pdf)**
-    5. For I<sup>2</sup>C, make sure SCL is PB6 and SDA is PB7
-    6. LEDs
+    1. For I<sup>2</sup>C, make sure SCL is PB6 and SDA is PB7
+    2. LEDs
         1. LED1 is PI9
         2. LED2 is PI8
         3. LED3 is PF1
         4. LED4 is PF4
         5. See layout page 12 for more details
-    7. Don't forget to reserve pins if needed
-    8. Enter user labels for reserved pins for easy identification in the generated code
+    3. Don't forget to reserve pins if needed
+    4. Enter user labels for reserved pins for easy identification in the generated code
+    5. Refer to the [Hardware Layout Page 3](https://www.st.com/content/ccc/resource/technical/layouts_and_diagrams/schematic_pack/group2/a9/96/52/b1/46/f6/4e/b9/mb1677-h573i-c02-schematic/files/mb1677-h573i-c02-schematic.pdf/jcr:content/translations/en.mb1677-h573i-c02-schematic.pdf) for pin layouts
 3. In _System Core_ it will show what pins are configured for what
 4. In _Boot Path and Debug Authentication_ > _Select_ > STiRoT > Secure Application
     9. Click on Finish and OK on the popup
